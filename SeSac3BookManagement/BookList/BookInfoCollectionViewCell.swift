@@ -15,9 +15,15 @@ class BookInfoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var bookImageView: UIImageView!
     @IBOutlet weak var bookRateLabel: UILabel!
     
-    func ConfigureCell() {
-        cellBackgroundView.backgroundColor = .lightGray
+    func ConfigureCell(data: BookInfo) {
+        cellBackgroundView.backgroundColor = data.backgroundColor
         cellBackgroundView.layer.cornerRadius = cellBackgroundView.frame.height / 8
+        
+        bookTitleLabel.text = data.title
+        
+//        bookImageView.image =
+        
+        bookRateLabel.text = "\(data.rate)"
     }
     
 }

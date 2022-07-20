@@ -18,6 +18,10 @@ struct BookInfo {
 struct BookInfoManager {
     private var bookList: [BookInfo]
     
+    var bookCount: Int {
+        return bookList.count
+    }
+    
     private let colorArray: [UIColor] = [.lightGray, .orange, .green, .blue]
     
     init() {
@@ -31,12 +35,8 @@ struct BookInfoManager {
         ]
     }
     
-    func getBookCount() -> Int {
-        return bookList.count
-    }
-    
     func getBookInfo(at index: Int) -> BookInfo? {
-        guard index < getBookCount() else { return nil }
+        guard index < bookCount else { return nil }
         
         return bookList[index]
     }

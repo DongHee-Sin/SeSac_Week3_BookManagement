@@ -9,6 +9,11 @@ import UIKit
 
 class BookInfoCollectionViewController: UICollectionViewController {
 
+    // MARK: - Propertys
+    var bookManager = BookInfoManager()
+    
+    
+    
     // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,14 +28,15 @@ class BookInfoCollectionViewController: UICollectionViewController {
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return bookManager.bookCount
     }
 
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookInfoCollectionViewCell", for: indexPath) as! BookInfoCollectionViewCell
         
-        cell.ConfigureCell()
+        guard let bookInfo = bookManager.getBookInfo(at: indexPath.row) else { return UICollectionViewCell() }
+        cell.ConfigureCell(data: bookInfo)
         
         return cell
     }

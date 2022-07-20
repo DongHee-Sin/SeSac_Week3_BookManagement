@@ -9,4 +9,15 @@ import UIKit
 
 class BookInfoCollectionViewCell: UICollectionViewCell {
     
+    // MARK: - Outlet
+    @IBOutlet weak var cellBackgroundView: UIView!
+    @IBOutlet weak var bookTitleLabel: UILabel!
+    @IBOutlet weak var bookImageView: UIImageView!
+    @IBOutlet weak var bookRateLabel: UILabel!
+    
+    func ConfigureCell() {
+        cellBackgroundView.backgroundColor = .lightGray
+        cellBackgroundView.layer.cornerRadius = cellBackgroundView.frame.height / 8
+    }
+    
 }

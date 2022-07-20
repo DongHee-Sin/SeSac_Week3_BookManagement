@@ -18,12 +18,32 @@ class BookInfoCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        settingUI()
     }
 
     
+    
     // MARK: - Methods
-    func configureCollectionViewLayout() {
+    func settingUI() {
+        collectionView.showsVerticalScrollIndicator = false
         
+        configureCollectionViewLayout()
+    }
+    
+    
+    func configureCollectionViewLayout() {
+        let layout = UICollectionViewFlowLayout()
+        
+        let itemSpacing: CGFloat = 12
+        let itemWidth: CGFloat = UIScreen.main.bounds.width - (itemSpacing * 3)
+        
+        layout.itemSize = CGSize(width: itemWidth / 2, height: itemWidth / 2)
+        layout.scrollDirection = .vertical
+        layout.sectionInset = UIEdgeInsets(top: itemSpacing, left: itemSpacing, bottom: itemSpacing, right: itemSpacing)
+        layout.minimumLineSpacing = itemSpacing
+        layout.minimumInteritemSpacing = itemSpacing
+        
+        collectionView.collectionViewLayout = layout
     }
     
     

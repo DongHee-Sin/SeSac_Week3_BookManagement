@@ -46,6 +46,7 @@ class BookDetailViewController: UIViewController {
             presentAlert(message: "ViewController 타입캐스팅 실패")
             return
         }
+        
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

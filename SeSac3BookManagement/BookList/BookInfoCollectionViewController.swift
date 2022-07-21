@@ -28,6 +28,8 @@ class BookInfoCollectionViewController: UICollectionViewController {
         collectionView.showsVerticalScrollIndicator = false
         
         configureCollectionViewLayout()
+        
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     

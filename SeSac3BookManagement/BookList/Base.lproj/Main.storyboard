@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--BOOKS-->
+        <!--도서-->
         <scene sceneID="NJ2-6t-ufj">
             <objects>
                 <collectionViewController storyboardIdentifier="BookInfoCollectionViewController" id="cHy-fb-0zh" customClass="BookInfoCollectionViewController" customModule="SeSac3BookManagement" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,7 +80,7 @@
                             <outlet property="delegate" destination="cHy-fb-0zh" id="nwl-G1-pfW"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="BOOKS" id="i4b-Bz-0YK">
+                    <navigationItem key="navigationItem" title="도서" id="i4b-Bz-0YK">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="magnifyingglass" catalog="system" id="DCH-3B-HKI">
                             <color key="tintColor" systemColor="labelColor"/>
                             <connections>

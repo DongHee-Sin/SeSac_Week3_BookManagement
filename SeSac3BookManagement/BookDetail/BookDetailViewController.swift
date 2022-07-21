@@ -43,7 +43,7 @@ class BookDetailViewController: UIViewController {
     @IBAction func webButtonTapped(_ sender: UIButton) {
         let sb = UIStoryboard(name: "WebView", bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: "WebViewController") as? WebViewController else {
-            print("WebViewController 타입캐스팅 실패")
+            presentAlert(message: "ViewController 타입캐스팅 실패")
             return
         }
         self.navigationController?.pushViewController(vc, animated: true)

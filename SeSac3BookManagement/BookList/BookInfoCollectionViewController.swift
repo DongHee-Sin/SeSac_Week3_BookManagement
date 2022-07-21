@@ -37,7 +37,7 @@ class BookInfoCollectionViewController: UICollectionViewController {
         
         // 2.
         guard let vc = sb.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController else {
-            print("SearchViewController 타입 캐스팅 실패")
+            presentAlert(message: "ViewController 타입캐스팅 실패")
             return
         }
         
@@ -64,7 +64,11 @@ class BookInfoCollectionViewController: UICollectionViewController {
         
         collectionView.collectionViewLayout = layout
     }
-    
+}
+
+
+
+extension BookInfoCollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return bookManager.bookCount
@@ -85,7 +89,7 @@ class BookInfoCollectionViewController: UICollectionViewController {
         let sb = UIStoryboard(name: "BookDetail", bundle: nil)
         
         guard let vc = sb.instantiateViewController(withIdentifier: "BookDetailViewController") as? BookDetailViewController else {
-            print("BookDetailViewController 타입 캐스팅 실패")
+            presentAlert(message: "ViewController 타입캐스팅 실패")
             return
         }
         
@@ -95,4 +99,5 @@ class BookInfoCollectionViewController: UICollectionViewController {
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
 }

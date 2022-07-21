@@ -23,6 +23,7 @@
 		D0466FE12887E89C00968BF9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D0466FE02887E89C00968BF9 /* Kingfisher */; };
 		D053E3852889336500F0E4C6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D053E3842889336500F0E4C6 /* WebViewController.swift */; };
 		D053E3872889336F00F0E4C6 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D053E3862889336F00F0E4C6 /* WebView.storyboard */; };
+		D053E38A288935A500F0E4C6 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D053E389288935A500F0E4C6 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		D0466FDC2887E73200968BF9 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		D053E3842889336500F0E4C6 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D053E3862889336F00F0E4C6 /* WebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
+		D053E389288935A500F0E4C6 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				D0466FDC2887E73200968BF9 /* UILabel+Extension.swift */,
+				D053E389288935A500F0E4C6 /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				D016F2252887D4C200C4A586 /* BookInfoManager.swift in Sources */,
 				D016F2202887D16900C4A586 /* BookInfoCollectionViewCell.swift in Sources */,
 				D00B23CD288925B800F88CFD /* BookDetailViewController.swift in Sources */,
+				D053E38A288935A500F0E4C6 /* UIViewController+Extension.swift in Sources */,
 				D016F2222887D18A00C4A586 /* BookInfoCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -31,6 +31,25 @@ class BookInfoCollectionViewController: UICollectionViewController {
     }
     
     
+    @IBAction func searchButtonTapped(_ sender: UIBarButtonItem) {
+        // 1.
+        let sb = UIStoryboard(name: "Search", bundle: nil)
+        
+        // 2.
+        guard let vc = sb.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController else {
+            print("SearchViewController 타입 캐스팅 실패")
+            return
+        }
+        
+        // 2.5
+        let navi = UINavigationController(rootViewController: vc)
+        navi.modalPresentationStyle = .fullScreen
+        
+        // 3.
+        present(navi, animated: true)
+    }
+    
+    
     func configureCollectionViewLayout() {
         let layout = UICollectionViewFlowLayout()
         
@@ -59,5 +78,21 @@ class BookInfoCollectionViewController: UICollectionViewController {
         cell.ConfigureCell(data: bookInfo)
         
         return cell
+    }
+    
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "BookDetail", bundle: nil)
+        
+        guard let vc = sb.instantiateViewController(withIdentifier: "BookDetailViewController") as? BookDetailViewController else {
+            print("BookDetailViewController 타입 캐스팅 실패")
+            return
+        }
+        
+        if let bookInfo = bookManager.getBookInfo(at: indexPath.row) {
+            vc.bookInfo = bookInfo
+        }
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Book Detail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="BookDetailViewController" id="Y6W-OH-hqX" customClass="BookDetailViewController" customModule="SeSac3BookManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6FS-D8-fdu">
+                                <rect key="frame" x="62" y="64" width="290" height="434.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6FS-D8-fdu" secondAttribute="height" multiplier="1:1.5" id="fvl-un-BNc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaC-iY-Dge">
+                                <rect key="frame" x="179" y="522.5" width="56" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZR-bQ-74f">
+                                <rect key="frame" x="179.5" y="589" width="55" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="WEB"/>
+                                <connections>
+                                    <action selector="webButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="y5R-Pl-N1b"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NaC-iY-Dge" secondAttribute="trailing" constant="20" id="CtH-rJ-4cE"/>
+                            <constraint firstItem="6FS-D8-fdu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="KGB-tD-hz9"/>
+                            <constraint firstItem="NaC-iY-Dge" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Lde-sf-b98"/>
+                            <constraint firstItem="NaC-iY-Dge" firstAttribute="top" secondItem="6FS-D8-fdu" secondAttribute="bottom" constant="24" id="Xwq-45-Qrl"/>
+                            <constraint firstItem="NaC-iY-Dge" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="aw2-hU-P2L"/>
+                            <constraint firstItem="jZR-bQ-74f" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ayO-wo-xMj"/>
+                            <constraint firstItem="jZR-bQ-74f" firstAttribute="top" secondItem="NaC-iY-Dge" secondAttribute="bottom" constant="40" id="eGq-J9-Op5"/>
+                            <constraint firstItem="6FS-D8-fdu" firstAttribute="width" secondItem="vDu-zF-Fre" secondAttribute="width" multiplier="0.7" id="jba-FW-Nl4"/>
+                            <constraint firstItem="6FS-D8-fdu" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="nvM-lU-H9E"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bookImageView" destination="6FS-D8-fdu" id="7H3-2c-kpC"/>
+                        <outlet property="bookTitleLabel" destination="NaC-iY-Dge" id="8Uw-Gm-wri"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="112"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

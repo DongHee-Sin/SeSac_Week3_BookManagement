@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cHy-fb-0zh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0zy-1p-koQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Book Info Collection View Controller-->
+        <!--BOOKS-->
         <scene sceneID="NJ2-6t-ufj">
             <objects>
                 <collectionViewController storyboardIdentifier="BookInfoCollectionViewController" id="cHy-fb-0zh" customClass="BookInfoCollectionViewController" customModule="SeSac3BookManagement" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,13 +80,43 @@
                             <outlet property="delegate" destination="cHy-fb-0zh" id="nwl-G1-pfW"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="BOOKS" id="i4b-Bz-0YK">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="magnifyingglass" catalog="system" id="DCH-3B-HKI">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="searchButtonTapped:" destination="cHy-fb-0zh" id="VNc-fR-5Y2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRJ-Ax-LgD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7.2463768115942031" y="54.910714285714285"/>
+            <point key="canvasLocation" x="902.89855072463774" y="54.910714285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Zzw-Yh-aR4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0zy-1p-koQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nII-zx-5jH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cHy-fb-0zh" kind="relationship" relationship="rootViewController" id="k7e-y4-e2C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4KR-Dp-e3M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-170" y="55"/>
         </scene>
     </scenes>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
